@@ -79,6 +79,37 @@ body {
   color: white;
 }
 
+/*begin portfolio gallery styles*/
+.portfolio-gallery {
+  margin: 1rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.5rem;
+  grid-auto-rows: 300px;
+}
+
+.gallery-item {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery-img:hover {
+  transform: scale(1.5);
+}
+
+.portfolio-gallery {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 /* Begin media queries for tablets and desktops */
 @media (mid-width: 600px) {
   .hero-heading {
