@@ -140,7 +140,7 @@ body {
   padding: 0 1rem 1rem 1rem;
 }
 .about-social a:hover {
-  color: fuchsia;
+  color: rgb(166, 206, 23);
 }
 
 /* Begin media queries for tablets and desktops */
