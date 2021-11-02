@@ -80,8 +80,10 @@ body {
 }
 
 /*begin portfolio gallery styles*/
-.portfolio-gallery {
+.portfolio-container {
   margin: 1rem auto 0 auto;
+}
+.portfolio-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 0.5rem;
@@ -105,9 +107,40 @@ body {
   transform: scale(1.5);
 }
 
-.portfolio-gallery {
+.portfolio-container h1 {
   font-size: 2rem;
   line-height: 2rem;
+  padding-left: 1rem;
+}
+
+/* Begin section styles */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1rem auto 0 auto;
+}
+.about-text {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.about-text h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.about-image img {
+  height: 100%;
+  object-fit: cover;
+}
+.about-social {
+  display: flex;
+  justify-content: start;
+}
+.about-social a {
+  color: black;
+  padding: 0 1rem 1rem 1rem;
+}
+.about-social a:hover {
+  color: fuchsia;
 }
 
 /* Begin media queries for tablets and desktops */
@@ -120,6 +153,34 @@ body {
     font-size: 2rem;
     line-height: 2rem;
   }
+  .portfolio-container h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .portfolio-container h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .portfolio-container p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .about-text h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  .about-social a {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 920px) {
@@ -130,5 +191,25 @@ body {
   .hero-text {
     font-size: 5rem;
     line-height: 5rem;
+  }
+  .portfolio-container h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .about-text h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .about-text p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .about-social a {
+    font-size: 3rem;
+    padding: 0 2rem 2rem 2rem;
+  }
+  .portfolio-container,
+  .about-container {
+    max-width: 1400px;
   }
 }
