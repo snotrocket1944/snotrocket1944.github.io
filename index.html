@@ -11,17 +11,17 @@
   </head>
   <body>
     <!--Begin Navigation-->
-    <nav class="nav-bar top-nav">
+    <nav class="nav-bar top-nav" id="top-nav-bar">
       <h1 class="logo"><a href="index.html">snotrocket1944</a></h1>
       <ul class="nav-menu">
         <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
         <li class="nav-item social-nav-item">
-          <a href="https://instagram.com/snotrocket1944" aria-label="Link to Private Instagram">
+          <a href="https://www.instagram.com/snotrocket1944/" aria-label="Link to Private Instagram">
             <i class="fab fa-instagram" aria-hidden= true></i>
           </a>
         </li>
         <li class="nav-item social-nav-item">
-          <a href="https://instagram.com/snottysniper" aria-label="Link to Public Instagram">
+          <a href="https://www.instagram.com/snottysniper/" aria-label="Link to Public Instagram">
             <i class="fab fa-instagram" aria-hidden= true></i>
           </a>
         </li>
@@ -179,10 +179,20 @@
       </div>
 
       <div class="gallery-item">
-        <a href="img/Foundation/Texture Project copy (OD).jpg" class="glightbox">
+        <a href="img/Foundation/Texture Project (OD).jpg" class="glightbox">
         <img
-         src="img/Foundation/Texture Project copy (OD).jpg" 
+         src="img/Foundation/Texture Project (OD).jpg" 
          alt="Stone wall charcoal for texture project." 
+         class="gallery-img"/> 
+        
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="img/Foundation/Atmospheric Perspective (D1).jpg" class="glightbox">
+        <img
+         src="img/Foundation/Atmospheric Perspective (D1).jpg" 
+         alt="Chaotic city scene with random objects." 
          class="gallery-img"/> 
         
         </a>
@@ -217,6 +227,19 @@
     <script src="js/glightbox.min.js"></script>
     <script type="text/javascript">
     const glightbox = GLightbox({ loop: true });
+
+    window.onscroll = function(){
+      scrollFunction();
+    }
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("top-nav-bar").style.background = "#000000";
+      }
+      else {
+        document.getElementById("top-nav-bar").style.background = "none";
+      }
+    }
     </script>
 
   </body>
